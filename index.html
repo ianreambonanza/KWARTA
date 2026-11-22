@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f9d6b">
+  <meta name="description" content="KWARTA - track your cash flow, balances, goals, bills and salary.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="KWARTA">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>KWARTA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">₱</span><span class="brand-name">KWARTA</span></div>
+      <button id="profileChip" class="chip" data-act="profiles" aria-label="Profiles"></button>
+    </header>
+
+    <main id="view" class="view" aria-live="polite"></main>
+
+    <button id="fab" class="fab" data-act="fab" aria-label="Add">+</button>
+
+    <nav class="nav" aria-label="Main">
+      <button class="nav-btn" data-act="goto" data-v="home"><span class="ico">🏠</span><span>Home</span></button>
+      <button class="nav-btn" data-act="goto" data-v="activity"><span class="ico">📒</span><span>Activity</span></button>
+      <button class="nav-btn" data-act="goto" data-v="accounts"><span class="ico">🏦</span><span>Accounts</span></button>
+      <button class="nav-btn" data-act="goto" data-v="goals"><span class="ico">🎯</span><span>Goals</span></button>
+      <button class="nav-btn" data-act="goto" data-v="bills"><span class="ico">🧾</span><span>Bills</span></button>
+      <button class="nav-btn" data-act="goto" data-v="salary"><span class="ico">💵</span><span>Salary</span></button>
+    </nav>
+  </div>
+
+  <div id="modal" class="modal" hidden></div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
